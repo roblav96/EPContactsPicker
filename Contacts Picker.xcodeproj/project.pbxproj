@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B21971FA4A818DDA8046D0B /* Pods_Contacts_Picker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79BCD8B36A550B869B71F70D /* Pods_Contacts_Picker.framework */; };
 		E210822E1D916C6F002CCAD5 /* EPContactsPicker.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */; };
 		F4C1C9421BDF8AB7001AA643 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */; };
 		F4C1C9491BDF8AB7001AA643 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C1C9481BDF8AB7001AA643 /* Assets.xcassets */; };
@@ -21,8 +22,24 @@
 		F4C1C9811BDF9227001AA643 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C1C97B1BDF9227001AA643 /* EPExtensions.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		24CFC5A01DA4074500D9C959 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4B7552C01CD28ADA00C638F1 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		79BCD8B36A550B869B71F70D /* Pods_Contacts_Picker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Contacts_Picker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3F2E0FA87456D0C1750B860 /* Pods-Contacts Picker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts Picker.release.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts Picker/Pods-Contacts Picker.release.xcconfig"; sourceTree = "<group>"; };
+		BC9AE0D04820BBAC94CF04C8 /* Pods-Contacts Picker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Contacts Picker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Contacts Picker/Pods-Contacts Picker.debug.xcconfig"; sourceTree = "<group>"; };
 		E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = EPContactsPicker.podspec; sourceTree = "<group>"; };
 		F4C1C93E1BDF8AB7001AA643 /* Contacts Picker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Contacts Picker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C1C9411BDF8AB7001AA643 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -44,12 +61,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B21971FA4A818DDA8046D0B /* Pods_Contacts_Picker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24CFC5911DA4030E00D9C959 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79BCD8B36A550B869B71F70D /* Pods_Contacts_Picker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6A8CA3D527C9435BDDA86436 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC9AE0D04820BBAC94CF04C8 /* Pods-Contacts Picker.debug.xcconfig */,
+				A3F2E0FA87456D0C1750B860 /* Pods-Contacts Picker.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F4C1C9351BDF8AB7001AA643 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +92,8 @@
 				E210822D1D916C6F002CCAD5 /* EPContactsPicker.podspec */,
 				F4C1C9401BDF8AB7001AA643 /* Contacts Picker */,
 				F4C1C93F1BDF8AB7001AA643 /* Products */,
+				24CFC5911DA4030E00D9C959 /* Frameworks */,
+				6A8CA3D527C9435BDDA86436 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,9 +140,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F4C1C95B1BDF8AB7001AA643 /* Build configuration list for PBXNativeTarget "Contacts Picker" */;
 			buildPhases = (
+				51D7C1FCD0F9B5BB349C36CC /* [CP] Check Pods Manifest.lock */,
 				F4C1C93A1BDF8AB7001AA643 /* Sources */,
 				F4C1C93B1BDF8AB7001AA643 /* Frameworks */,
 				F4C1C93C1BDF8AB7001AA643 /* Resources */,
+				24CFC5A01DA4074500D9C959 /* Embed Frameworks */,
+				C98E769D0661FE7D2B5DA9C9 /* [CP] Embed Pods Frameworks */,
+				BD8D48E73F7ECB6572527D38 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,8 +168,9 @@
 				TargetAttributes = {
 					F4C1C93D1BDF8AB7001AA643 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = NDQC9EKP48;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -164,6 +206,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		51D7C1FCD0F9B5BB349C36CC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD8D48E73F7ECB6572527D38 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Contacts Picker/Pods-Contacts Picker-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C98E769D0661FE7D2B5DA9C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Contacts Picker/Pods-Contacts Picker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F4C1C93A1BDF8AB7001AA643 /* Sources */ = {
@@ -292,9 +382,15 @@
 		};
 		F4C1C95C1BDF8AB7001AA643 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC9AE0D04820BBAC94CF04C8 /* Pods-Contacts Picker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NDQC9EKP48;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor",
+				);
 				INFOPLIST_FILE = "Contacts Picker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prabaharan.eppicker.Contacts-Picker";
@@ -305,9 +401,15 @@
 		};
 		F4C1C95D1BDF8AB7001AA643 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3F2E0FA87456D0C1750B860 /* Pods-Contacts Picker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = NDQC9EKP48;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Vendor",
+				);
 				INFOPLIST_FILE = "Contacts Picker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.prabaharan.eppicker.Contacts-Picker";

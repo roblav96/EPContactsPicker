@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import
 
 class ViewController: UIViewController, EPPickerDelegate {
 
@@ -18,15 +19,21 @@ class ViewController: UIViewController, EPPickerDelegate {
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
-  }
-
-  @IBAction func onTouchShowMeContactsButton(_ sender: AnyObject) {
+    }
     
-    let contactPickerScene = EPContactsPicker(delegate: self, multiSelection:true, subtitleCellType: SubtitleCellValue.email)
-    let navigationController = UINavigationController(rootViewController: contactPickerScene)
-    self.present(navigationController, animated: true, completion: nil)
+    @IBAction func onTouchShowMeContactsButton(_ sender: AnyObject) {
+        
+        let contactPickerScene = EPContactsPicker(delegate: self, multiSelection:true, subtitleCellType: SubtitleCellValue.email)
+        let navigationController = UINavigationController(rootViewController: contactPickerScene)
+        self.present(navigationController, animated: true, completion: nil)
+        
+    }
     
-  }
+    @IBAction func onTouchDoThreadsButton(_ sender: AnyObject) {
+        
+        print("hdiwahdiauwd")
+        
+    }
     
 //MARK: EPContactsPicker delegates
     func epContactPicker(_: EPContactsPicker, didContactFetchFailed error : NSError)
