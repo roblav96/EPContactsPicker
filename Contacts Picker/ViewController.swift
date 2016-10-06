@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import
+
+
 
 class ViewController: UIViewController, EPPickerDelegate {
 
@@ -23,7 +24,7 @@ class ViewController: UIViewController, EPPickerDelegate {
     
     @IBAction func onTouchShowMeContactsButton(_ sender: AnyObject) {
         
-        let contactPickerScene = EPContactsPicker(delegate: self, multiSelection:true, subtitleCellType: SubtitleCellValue.email)
+        let contactPickerScene = EPContactsPicker(delegate: self, multiSelection:false, subtitleCellType: SubtitleCellValue.email)
         let navigationController = UINavigationController(rootViewController: contactPickerScene)
         self.present(navigationController, animated: true, completion: nil)
         
